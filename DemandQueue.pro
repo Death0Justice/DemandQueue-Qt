@@ -26,3 +26,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 win32:RC_ICONS += isaac.ico
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../OpenXLSXLib/lib/ -lOpenXLSX
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../OpenXLSXLib/lib/ -lOpenXLSX
+else:unix: LIBS += -L$$PWD/../../../OpenXLSXLib/lib/ -lOpenXLSX
+
+INCLUDEPATH += $$PWD/../../../OpenXLSXLib/include/OpenXLSX
+DEPENDPATH += $$PWD/../../../OpenXLSXLib/include/OpenXLSX

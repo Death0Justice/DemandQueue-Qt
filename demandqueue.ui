@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>960</width>
+    <height>960</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>960</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>DemandQueue</string>
@@ -17,7 +23,354 @@
    <iconset>
     <normaloff>isaac.ico</normaloff>isaac.ico</iconset>
   </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>10</number>
+   </property>
+   <item>
+    <widget class="QTableWidget" name="table">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>640</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>960</width>
+       <height>640</height>
+      </size>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>960</width>
+       <height>720</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>宋体</family>
+       <pointsize>12</pointsize>
+       <underline>false</underline>
+      </font>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <column>
+      <property name="text">
+       <string>老板名称</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>点播时间</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>点播内容</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QLabel" name="label">
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>老板名称</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="name">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>点播时间</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="date">
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item alignment="Qt::AlignLeft|Qt::AlignTop">
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>点播内容</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="desc">
+         <property name="font">
+          <font>
+           <family>宋体</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QPushButton" name="quick">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>快速填充</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="add">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>添加点播</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cut">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>插播</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="complete">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>完成点播</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <item>
+      <widget class="QPushButton" name="sort">
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>按时间排序</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="delUnformatted">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>宋体</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>删除格式错误点播</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>add</sender>
+   <signal>clicked()</signal>
+   <receiver>DemandQueue</receiver>
+   <slot>appendQueue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>361</x>
+     <y>900</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>table</sender>
+   <signal>customContextMenuRequested(QPoint)</signal>
+   <receiver>DemandQueue</receiver>
+   <slot>contextMenu()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>479</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>complete</sender>
+   <signal>clicked()</signal>
+   <receiver>DemandQueue</receiver>
+   <slot>popQueue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>833</x>
+     <y>900</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cut</sender>
+   <signal>clicked()</signal>
+   <receiver>DemandQueue</receiver>
+   <slot>cutQueue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>597</x>
+     <y>900</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>delUnformatted</sender>
+   <signal>clicked()</signal>
+   <receiver>DemandQueue</receiver>
+   <slot>delUnformatted()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>715</x>
+     <y>936</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>479</x>
+     <y>479</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>contextMenu()</slot>
+  <slot>quickAction()</slot>
+  <slot>appendQueue()</slot>
+  <slot>cutQueue()</slot>
+  <slot>popQueue()</slot>
+  <slot>sort()</slot>
+  <slot>updateHistory()</slot>
+  <slot>delUnformatted()</slot>
+ </slots>
 </ui>
